@@ -56,7 +56,7 @@ def update():
             if done:
                 plot_y.append(reward_total)
                 print(f"Episode {episode}:")
-                print(f"Total rewards: {reward_total}")
+                print(f"Total rewards(lr={lr_test}): {reward_total}")
                 break
 
     # end of game

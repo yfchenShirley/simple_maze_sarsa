@@ -59,5 +59,7 @@ class SarsaTable(RL):
         else:
             q_target = r  # next state is terminal
         self.q_table.loc[s, a] += self.lr * (q_target - q_predict)  # update
-        if s_ == 'terminal':
-            self.q_table.to_pickle('./models/model_sarsa.pkl')
+#        if s_ == 'terminal':
+#            self.q_table.to_pickle('./models/model_sarsa.pkl')
+
+            
