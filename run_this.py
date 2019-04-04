@@ -73,7 +73,7 @@ if __name__ == "__main__":
            title='Total rewards at each episode')
     ax.grid()
 
-    for lr_test in [0.01, 0.1]:#, 0.03, 0.05, 0.07, 0.09, 0.3, 0.5
+    for lr_test in [0.01, 0.03, 0.05, 0.07, 0.09, 0.3, 0.5, 0.1]:#
         
         env = Maze()
         RL = SarsaTable(actions=list(range(env.n_actions)), learning_rate=lr_test)
