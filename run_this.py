@@ -15,8 +15,8 @@ View more on my tutorial page: https://morvanzhou.github.io/tutorials/
 from maze_env import Maze
 from Sarsa_brain import SarsaTable
 
-EPIS = 1000
-plot_x = []
+EPIS = 500
+plot_y = []
 
 def update():
     for episode in range(EPIS):
@@ -47,7 +47,7 @@ def update():
 
             # break while loop when end of this episode
             if done:
-                plot_x.append(reward_total)
+                plot_y.append(reward_total)
                 print(f"Episode {episode}:")
                 print(f"Total rewards: {reward_total}")
                 break
@@ -59,10 +59,8 @@ def update():
 
     # Data for plotting
    
-    s = 1 + np.sin(2 * np.pi * t)
-
     fig, ax = plt.subplots()
-    ax.plot(plot_x, range(EPIS))
+    ax.plot(range(EPIS), plot_y)
 
     ax.set(xlabel='episode (s)', ylabel='Total Rewards',
            title='Total rewards at each episode')
