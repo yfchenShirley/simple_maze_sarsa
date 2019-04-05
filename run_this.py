@@ -19,7 +19,7 @@ import matplotlib
 import matplotlib.pyplot as plt
 import numpy as np
 
-EPIS = 500
+EPIS = 300
 #plot_y = []
 
 def update():
@@ -73,7 +73,7 @@ if __name__ == "__main__":
            title='Total rewards at each episode')
     ax.grid()
 
-    for lr_test in [0.01, 0.1]:#, 0.03, 0.05, 0.07, 0.09, 0.3, 0.5
+    for lr_test in [0.09, 0.1, 0.3, 0.5]:#, 0.03, 0.05, 0.07, 0.09, 0.3, 0.5
         
         env = Maze()
         RL = SarsaTable(actions=list(range(env.n_actions)), learning_rate=lr_test)
@@ -81,7 +81,7 @@ if __name__ == "__main__":
         env.mainloop()
         ax.plot(range(EPIS), plot_y, label='lr='+str(lr_test))
      
-    legend = ax.legend(loc='upper left', shadow=True, fontsize='x-large')    
+    legend = ax.legend(loc='lower right', shadow=True, fontsize='x-large')    
     fig.savefig("test.png")
     plt.show()
 
