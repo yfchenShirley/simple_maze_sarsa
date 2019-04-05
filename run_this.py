@@ -82,7 +82,7 @@ if __name__ == "__main__":
         ax.plot(range(EPIS), plot_y, label='lr='+str(lr_test))
      
     legend = ax.legend(loc='lower right', shadow=True, fontsize='x-large')    
-    fig.savefig("test.png")
+    fig.savefig("lr.png")
     plt.show()
 
 
